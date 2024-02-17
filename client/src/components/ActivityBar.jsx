@@ -4,19 +4,22 @@ import ActivityBarIcon from './ActivityBarIcon';
 import SearchIcon from '@mui/icons-material/Search';
 
 
-function ActivityBar() {
-
-  const [active, setActive] = useState('explorer');
+function ActivityBar({sidebar, setSidebar}) {
 
   const handleClick = (e, id) => {
-    setActive(id);
+    e.preventDefault();
+    if (id === sidebar) {
+      setSidebar('');
+    } else {
+      setSidebar(id);
+    }
   }
   return (
     <div className='activity'>
-      <ActivityBarIcon id="explorer" active={active} onClick={handleClick}  
-      icon={<TfiFiles className={active === 'explorer' ? 'activity-bar-icon-selected' : 'activity-bar-icon'} />}/>
-      <ActivityBarIcon id="search" active={active} onClick={handleClick}  
-      icon={<SearchIcon style={{ transform: 'scaleX(-1)'}} className={active === 'search' ? 'activity-bar-icon-selected' : 'activity-bar-icon'} />}/>
+      <ActivityBarIcon id="explorer" active={sidebar} onClick={handleClick}  
+      icon={<TfiFiles className={sidebar === 'explorer' ? 'activity-bar-icon-selected' : 'activity-bar-icon'} />}/>
+      <ActivityBarIcon id="search" active={sidebar} onClick={handleClick}  
+      icon={<SearchIcon style={{ transform: 'scaleX(-1)'}} className={sidebar === 'search' ? 'activity-bar-icon-selected' : 'activity-bar-icon'} />}/>
     </div>
   )
 }

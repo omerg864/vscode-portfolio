@@ -12,6 +12,19 @@
   --gray: #cacaca;
   --selected-icon-color: rgb(255, 186, 249);
   --light-gray: rgba(202, 202, 202, 0.5);
+  --light-page: rgba(60, 59, 59, 0.548);
+  --light-explorer: #181818bd;
+  --page: #1f1f1f;
+  --function-def: #5598d1;
+  --function: #dcdcaa;
+  --variable: #9cdcfe;
+  --string: #cb8f77;
+  --yellow-brackets: #fcd304;
+  --pink-brackets: #d770d3;
+  --import-class: #4bc1a9;
+  --import: #c586c0;
+  --const: #4fc2ff;
+  --blue-brackets: #169fff;
 }
 
 .App {
@@ -25,10 +38,15 @@
   display: flex;
   height: 100%;
   flex: 1;
+  overflow: hidden;
 }
 
 .editor {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  background-color: var(--page);
 }
 
 header {
@@ -53,6 +71,10 @@ header {
   padding: 10px;
   text-align: center;
   min-width: 20%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 footer {
@@ -60,6 +82,15 @@ footer {
   color: var(--text);
   padding: 10px;
   text-align: center;
+}
+
+.tabs-bar {
+  width: 100%;
+  background-color: var(--explorer);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .tabs {
@@ -136,7 +167,7 @@ footer {
 }
 
 .icon-button:hover {
-  background-color: var(--gray);
+  background-color: var(--light-gray);
 }
 
 .explorer-editor {
@@ -208,4 +239,114 @@ footer {
   height: 100%;
   background-color: var(--light-gray);
   left: 7px;
+}
+
+.file-open-info {
+  display: flex;
+  gap: 3px;
+}
+
+.tab {
+  display: flex;
+  gap: 3px;
+  border: 1px solid var(--light-page);
+  border-top: none;
+  cursor: pointer;
+  padding: 5px;
+  color: var(--text);
+  align-items: center;
+}
+
+.active-tab {
+  display: flex;
+  gap: 3px;
+  border-top: 1px solid var(--activity);
+  cursor: pointer;
+  padding: 5px;
+  color: var(--text);
+  align-items: center;
+  background-color: var(--page);
+}
+
+.tab:hover {
+  background-color: var(--light-explorer);
+}
+
+
+.tab-info {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.src-bar {
+  display: flex;
+  padding: 1px;
+  background-color: var(--page);
+  color: var(--gray);
+}
+
+main {
+  background-color: var(--page);
+  width: 100%;
+  flex: 1;
+  display: flex;
+  gap: 1px;
+  padding: 10px;
+  flex-direction: column;
+  position: relative;
+  overflow: scroll;
+  text-align: start;
+  color: var(--text);
+  box-sizing: border-box;
+}
+
+.number-row {
+  color: var(--gray);
+  user-select: none;
+  margin-right: 1rem;
+}
+
+.import-python {
+  color: var(--import);
+}
+
+.import-class-python {
+  color: var(--import-class);
+}
+
+.function-def-python {
+  color: var(--function-def);
+}
+
+.function-python {
+  color: var(--function);
+}
+
+.variable-python {
+  color: var(--variable);
+}
+
+.string-python {
+  color: var(--string);
+}
+
+.yellow-brackets {
+  color: var(--yellow-brackets);
+}
+
+.pink-brackets {
+  color: var(--pink-brackets);
+}
+
+.const {
+  color: var(--const);
+}
+
+.blue-brackets {
+  color: var(--blue-brackets);
+}
+
+main > div > span {
+  white-space:nowrap;
 }

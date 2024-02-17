@@ -9,8 +9,8 @@ function Accordion({ title, icon, openIcon, children, style, open, animation}) {
     const [isActive, setIsActive] = useState(open ? open : false);
 
     const openAnimation = useSpring({
-        from: { opacity: "0", maxHeight: icon ? "24px" : "18px" },
-        to: { opacity: "1", maxHeight: isActive ? "1200px" : icon ? "24px" : "18px" },
+        from: { opacity: "0", maxHeight: icon ? "24px" : "15px" },
+        to: { opacity: "1", maxHeight: isActive ? "1200px" : icon ? "24px" : "15px" },
         config: { duration: animation ? "300": "0" }
       });
 

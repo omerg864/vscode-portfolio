@@ -3,9 +3,50 @@ import IconButton from './IconButton';
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import Accordion from './Accordion.jsx';
 import File from './File.jsx';
+import FileOpen from './FileOpen.jsx';
 
 
-function Explorer() {
+function Explorer({ tabs, setTabs, setActiveTab, activeTab}) {
+
+  const closeTab = (e, id) => {
+    e.stopPropagation();
+    if (activeTab.id === id) {
+      setActiveTab(tabs.length > 1 ? tabs.find(tab => tab.id !== id) : {});
+    }
+    setTabs(tabs.filter(tab => tab.id !== id));
+  }
+
+  const openFromEditTab = (e, id) => {
+    e.stopPropagation();
+    setActiveTab(tabs.find(tab => tab.id === id));
+  }
+
+  const onClickFile = (fileData) => {
+    if(activeTab.id === fileData.id) {
+      return;
+    }
+    if(tabs.find(tab => tab.id === fileData.id)) {
+      setActiveTab(tabs.find(tab => tab.id === fileData.id));
+    } else {
+      setTabs([...tabs.filter(tab => !tab.temp), {...fileData, temp: true}]);
+      setActiveTab({...fileData, temp: true});
+    }
+  }
+
+  const onDoubleClickFile = (fileData) => {
+    if(activeTab.id === fileData.id && !activeTab.temp) {
+      return;
+    }
+    console.log(fileData);
+    if(tabs.find(tab => tab.id === fileData.id)) {
+      setTabs([...tabs.filter(tab => tab.id !== fileData.id && !tab.temp), fileData]);
+      setActiveTab(fileData);
+    } else {
+      setTabs([...tabs.filter(tab => !tab.temp), fileData]);
+      setActiveTab(fileData);
+    }
+  }
+
   return (
     <div className='explorer'>
       <div className='explorer-title'>
@@ -13,13 +54,13 @@ function Explorer() {
         <IconButton icon={<HiOutlineDotsHorizontal/>} />
       </div>
       <Accordion animation={true} open={true} title="OPEN EDITORS">
-        <div className='file'>File 1</div>
-        <div className='file'>File 2</div>
-        <div className='file'>File 3</div>
+        {tabs.map((tab) => {
+          return <FileOpen key={tab.id} name={tab.name} id={tab.id} close={closeTab} onClick={openFromEditTab} icon={tab.icon ? <img alt={tab.icon.alt} className='file-icon' src={tab.icon.src}/> : false}/>
+        })}
       </Accordion>
       <Accordion animation={true} open={true} style={{marginTop: '8px'}} title="OMER GAIZINGER">
-        <File name="main.py" icon={<img alt='python-icon' className='file-icon' src='/file-icons/python.svg'/>}/>
-        <File name="contact.js" icon={<img alt='js-icon' className='file-icon' src='/file-icons/javascript.svg'/>}/>
+        <File onClick={onClickFile} onDoubleClick={onDoubleClickFile} id="main" name="main.py" icon={{alt: "python-icon", src: "/file-icons/python.svg"}}/>
+        <File onClick={onClickFile} onDoubleClick={onDoubleClickFile} id="contact" name="contact.js" icon={{alt: "js-icon", src: "/file-icons/javascript.svg"}}/>
         <Accordion style={{marginLeft: '8px'}} icon={<img alt='graduation-folder' className='folder-icon' src='/folders-icons/folder-graduate.png'/>} 
         openIcon={<img className="folder-icon" alt='graduation-folder-open' src='/folders-icons/folder-graduate-open.png'/>} title="Education">
           <div className='line'></div>
