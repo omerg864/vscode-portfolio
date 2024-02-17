@@ -25,6 +25,7 @@
   --import: #c586c0;
   --const: #4fc2ff;
   --blue-brackets: #169fff;
+  --comment: #6a9956;
 }
 
 .App {
@@ -345,6 +346,10 @@ main {
 
 .blue-brackets {
   color: var(--blue-brackets);
+}
+
+.comment {
+  color: var(--comment);
 }
 
 main > div > span {

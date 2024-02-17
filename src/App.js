@@ -14,6 +14,12 @@ function App() {
   const [tabs, setTabs] = useState([{name: 'main.py', icon: {src: "/file-icons/python.svg", alt: "python-icon"}, id: "main", component: 'intro'}]);
   const [sideBar, setSideBar] = useState('explorer');
 
+  const skills = [];
+  const courses = [];
+  const projects = [];
+  const experience = [];
+  const academy = [];
+
   return (
     <div className="App">
       <Header />

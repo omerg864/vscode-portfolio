@@ -83,6 +83,12 @@ function Explorer({ tabs, setTabs, setActiveTab, activeTab}) {
             <div className='file'>File 2</div>
             <div className='file'>File 3</div>
           </Accordion>
+          <Accordion style={{marginLeft: '8px'}} icon={<img alt='resumes-folder' className='folder-icon' src='/folders-icons/folder-scripts.svg'/>} 
+          openIcon={<img className="folder-icon" alt='resumes-folder-open' src='/folders-icons/folder-scripts-open.svg'/>} title="Resumes">
+            <div className='line'></div>
+            <File onClick={onClickFile} onDoubleClick={onDoubleClickFile} id="ResumeHebrew" name="ResumeHebrew.docx" icon={{alt: "word-icon", src: "/file-icons/word.svg"}}/>
+            <File onClick={onClickFile} onDoubleClick={onDoubleClickFile} id="ResumeEnglish" name="ResumeEnglish.docx" icon={{alt: "word-icon", src: "/file-icons/word.svg"}}/>
+          </Accordion>
           <Accordion style={{marginLeft: '8px'}} icon={<img alt='experience-folder' className='folder-icon' src='/folders-icons/folder-resource.svg'/>} 
           openIcon={<img className="folder-icon" alt='experience-folder-open' src='/folders-icons/folder-resource-open.svg'/>} title="Experience">
             <div className='line'></div>
