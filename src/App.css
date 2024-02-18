@@ -76,6 +76,7 @@ header {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  overflow: scroll;
 }
 
 footer {
@@ -98,6 +99,7 @@ footer {
   display: flex;
   width: 100%;
   background-color: var(--explorer);
+  overflow: scroll;
 }
 
 .search {
@@ -278,6 +280,7 @@ footer {
   display: flex;
   gap: 3px;
   align-items: center;
+  white-space:nowrap;
 }
 
 .src-bar {

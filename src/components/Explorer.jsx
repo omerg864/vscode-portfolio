@@ -6,7 +6,7 @@ import File from './File.jsx';
 import FileOpen from './FileOpen.jsx';
 
 
-function Explorer({ tabs, setTabs, setActiveTab, activeTab}) {
+function Explorer({ tabs, setTabs, setActiveTab, activeTab, academy, skills}) {
 
   const closeTab = (e, id) => {
     e.stopPropagation();
@@ -59,16 +59,17 @@ function Explorer({ tabs, setTabs, setActiveTab, activeTab}) {
         })}
       </Accordion>
       <Accordion animation={true} open={true} style={{marginTop: '8px'}} title="OMER GAIZINGER">
-        <File onClick={onClickFile} onDoubleClick={onDoubleClickFile} id="main" name="main.py" icon={{alt: "python-icon", src: "/file-icons/python.svg"}}/>
-        <File onClick={onClickFile} onDoubleClick={onDoubleClickFile} id="contact" name="contact.js" icon={{alt: "js-icon", src: "/file-icons/javascript.svg"}}/>
+        <File onClick={onClickFile} onDoubleClick={onDoubleClickFile} object={{name: "main.py", id:"main", icon: {alt: "python-icon", src: "/file-icons/python.svg"} }}/>
+        <File onClick={onClickFile} onDoubleClick={onDoubleClickFile} object={{name: "contact.js", id:"contact", icon: {alt: "js-icon", src: "/file-icons/javascript.svg"} }} />
         <Accordion style={{marginLeft: '8px'}} icon={<img alt='graduation-folder' className='folder-icon' src='/folders-icons/folder-graduate.png'/>} 
         openIcon={<img className="folder-icon" alt='graduation-folder-open' src='/folders-icons/folder-graduate-open.png'/>} title="Education">
           <div className='line'></div>
           <Accordion style={{marginLeft: '8px'}} icon={<img alt='academy-folder' className='folder-icon' src='/folders-icons/folder-core.svg'/>} 
           openIcon={<img className="folder-icon" alt='academy-folder-open' src='/folders-icons/folder-core-open.svg'/>} title="Academy">
             <div className='line'></div>
-            <div className='file'>File 2</div>
-            <div className='file'>File 3</div>
+            {academy.map(a => {
+              return <File  onClick={onClickFile} onDoubleClick={onDoubleClickFile} object={a} key={a.id}/>
+            })}
           </Accordion>
           <Accordion style={{marginLeft: '8px'}} icon={<img alt='courses-folder' className='folder-icon' src='/folders-icons/folder-middleware.svg'/>} 
           openIcon={<img className="folder-icon" alt='courses-folder-open' src='/folders-icons/folder-middleware-open.svg'/>} title="Courses">
@@ -80,14 +81,15 @@ function Explorer({ tabs, setTabs, setActiveTab, activeTab}) {
         <Accordion style={{marginLeft: '8px'}} icon={<img alt='skills-folder' className='folder-icon' src='/folders-icons/folder-src.svg'/>} 
           openIcon={<img className="folder-icon" alt='skills-folder-open' src='/folders-icons/folder-src-open.svg'/>} title="Skills">
             <div className='line'></div>
-            <div className='file'>File 2</div>
-            <div className='file'>File 3</div>
+            {skills.map(s => {
+              return <File  onClick={onClickFile} onDoubleClick={onDoubleClickFile} object={s} key={s.id}/>
+            })}
           </Accordion>
           <Accordion style={{marginLeft: '8px'}} icon={<img alt='resumes-folder' className='folder-icon' src='/folders-icons/folder-scripts.svg'/>} 
           openIcon={<img className="folder-icon" alt='resumes-folder-open' src='/folders-icons/folder-scripts-open.svg'/>} title="Resumes">
             <div className='line'></div>
-            <File onClick={onClickFile} onDoubleClick={onDoubleClickFile} id="ResumeHebrew" name="ResumeHebrew.docx" icon={{alt: "word-icon", src: "/file-icons/word.svg"}}/>
-            <File onClick={onClickFile} onDoubleClick={onDoubleClickFile} id="ResumeEnglish" name="ResumeEnglish.docx" icon={{alt: "word-icon", src: "/file-icons/word.svg"}}/>
+            <File onClick={onClickFile} onDoubleClick={onDoubleClickFile} object={{name: "ResumeHebrew.docx", id:"ResumeHebrew", icon: {alt: "word-icon", src: "/file-icons/word.svg"} }} />
+            <File onClick={onClickFile} onDoubleClick={onDoubleClickFile} object={{name: "ResumeEnglish.docx", id:"ResumeEnglish", icon: {alt: "word-icon", src: "/file-icons/word.svg"} }} />
           </Accordion>
           <Accordion style={{marginLeft: '8px'}} icon={<img alt='experience-folder' className='folder-icon' src='/folders-icons/folder-resource.svg'/>} 
           openIcon={<img className="folder-icon" alt='experience-folder-open' src='/folders-icons/folder-resource-open.svg'/>} title="Experience">

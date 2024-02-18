@@ -1,0 +1,19 @@
+[
+    {
+        "id": "hilma",
+        "name": "Full Stack Developer",
+        "description": "Mentored a fullstack course for ﬁghters to hi-tech program. Worked on Hospikol, a project of Hilma which is currently being used in hospitals around the country.",
+        "location": "Hilma Tech",
+        "start_date": "09-2022",
+        "end_date": "11-2022"
+    },
+    {
+        "id": "security",
+        "name": "Security Guard",
+        "description": "Security Guard and shift manager in ramla's court house.",
+        "location": "Ramla",
+        "start_date": "05-2020",
+        "end_date": "",
+        "ongoing": true
+    }
+]

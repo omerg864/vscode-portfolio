@@ -1,0 +1,34 @@
+[
+    {
+        "id": "schedule",
+        "name": "Work Schedule Site",
+        "description1": "Developed a work schedule site to manage shifts in Ramla's court house using Django framework, HTML, CSS and JavaScript.",
+        "description2": "Later upgraded to TypeScript with NestJS, React and MongoDB.",
+        "url": "https://mishmar-ramla.vercel.app"
+    },
+    {
+        "id": "appointment",
+        "name": "Appointment Site",
+        "description1": "Developed appointment web app for a barber shop using ExpressJS, React and MongoDB.",
+        "url": "https://appointment-app-rho.vercel.app"
+
+    },
+    {
+        "id": "calculator",
+        "name": "Degree calculator PWA",
+        "description1": "Developed a degree calculator web app that supports for PWA for managing courses using  ExpressJS, React and MongoDB.",
+        "url": "https://hadar-degree-calculator.vercel.app"
+    },
+    {
+        "id": "gta",
+        "name": "GTA V mod",
+        "description1": "Developed a GTA V mod that adds a new menu to the game in C#.",
+        "url": "https://www.gta5-mods.com/scripts/nearby-peds-menu"
+    },
+    {
+        "id": "telegram",
+        "name": "telegram bot",
+        "description1": "Developed a telegram bot that sends me a message with Udemy coupons every day in Python and mongoDB.",
+        "url": "https://t.me/nice_notifications_bot"
+    }
+]

@@ -1,0 +1,107 @@
+[
+    {
+        "name": "javascript.svg", 
+        "component": "skill", 
+        "id": "js", 
+        "icon": { "src": "/file-icons/javascript.svg", "alt": "js-icon"}, 
+        "image": "/file-icons/javascript.svg"
+    },
+    {
+        "name": "typescript.svg", 
+        "component": "skill", 
+        "id": "ts", 
+        "icon": { "src": "/file-icons/typescript.svg", "alt": "ts-icon"}, 
+        "image": "/file-icons/typescript.svg"
+    },
+    {
+        "name": "react.svg", 
+        "component": "skill", 
+        "id": "react", 
+        "icon": { "src": "/file-icons/react.svg", "alt": "react-icon"}, 
+        "image": "/file-icons/react.svg"
+    },
+    {
+        "name": "nodejs.svg", 
+        "component": "skill", 
+        "id": "nodejs", 
+        "icon": { "src": "/file-icons/nodejs.svg", "alt": "nodejs-icon"}, 
+        "image": "/file-icons/nodejs.svg"
+    },
+    {
+        "name": "css.svg", 
+        "component": "skill", 
+        "id": "css", 
+        "icon": { "src": "/file-icons/css.svg", "alt": "css-icon"}, 
+        "image": "/file-icons/css.svg"
+    },
+    {
+        "name": "html.svg", 
+        "component": "skill", 
+        "id": "html", 
+        "icon": { "src": "/file-icons/html.svg", "alt": "html-icon"}, 
+        "image": "/file-icons/html.svg"
+    },
+    {
+        "name": "SQL.svg", 
+        "component": "skill", 
+        "id": "sql", 
+        "icon": { "src": "/file-icons/database.svg", "alt": "database-icon"}, 
+        "image": "/file-icons/database.svg"
+    },
+    {
+        "name": "mongoDB.svg", 
+        "component": "skill", 
+        "id": "mongo", 
+        "icon": { "src": "/file-icons/database.svg", "alt": "database-icon"}, 
+        "image": "/file-icons/database.svg"
+    },
+    {
+        "name": "python.svg", 
+        "component": "skill", 
+        "id": "python", 
+        "icon": { "src": "/file-icons/python.svg", "alt": "python-icon"}, 
+        "image": "/file-icons/python.svg"
+    },
+    {
+        "name": "java.svg", 
+        "component": "skill", 
+        "id": "java", 
+        "icon": { "src": "/file-icons/java.svg", "alt": "java-icon"}, 
+        "image": "/file-icons/java.svg"
+    },
+    {
+        "name": "c.svg", 
+        "component": "skill", 
+        "id": "c", 
+        "icon": { "src": "/file-icons/c.svg", "alt": "c-icon"}, 
+        "image": "/file-icons/c.svg"
+    },
+    {
+        "name": "c++.svg", 
+        "component": "skill", 
+        "id": "c++", 
+        "icon": { "src": "/file-icons/cpp.svg", "alt": "cpp-icon"}, 
+        "image": "/file-icons/cpp.svg"
+    },
+    {
+        "name": "csharp.svg", 
+        "component": "skill", 
+        "id": "csharp", 
+        "icon": { "src": "/file-icons/csharp.svg", "alt": "csharp-icon"}, 
+        "image": "/file-icons/csharp.svg"
+    },
+    {
+        "name": "nest.svg", 
+        "component": "skill", 
+        "id": "nest", 
+        "icon": { "src": "/file-icons/nest.svg", "alt": "nest-icon"}, 
+        "image": "/file-icons/nest.svg"
+    },
+    {
+        "name": "django.svg", 
+        "component": "skill", 
+        "id": "django", 
+        "icon": { "src": "/file-icons/django.svg", "alt": "django-icon"}, 
+        "image": "/file-icons/django.svg"
+    }
+]
