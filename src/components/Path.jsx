@@ -2,6 +2,9 @@ import React from 'react'
 import { IoIosArrowForward } from "react-icons/io";
 
 function Path({ path, activeTab }) {
+  if (!activeTab.id){
+    return <></>
+  }
   return (
     <>
         {path.map((folder, index) => {

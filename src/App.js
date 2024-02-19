@@ -50,7 +50,7 @@ function App() {
           {activeTab.component === 'resume' && <Resume activeTab={activeTab} />}
         </div>
       </div>
-      <StatusBar />
+      <StatusBar activeTab={activeTab}/>
     </div>
   );
 }

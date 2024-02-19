@@ -90,8 +90,14 @@ header {
 footer {
   background-color: var(--header);
   color: var(--text);
-  padding: 10px;
   text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: flex;
+  border-top: 1px solid var(--explorer);
+  justify-content: space-between;
 }
 
 .tabs-bar {
@@ -171,6 +177,7 @@ footer {
   cursor: pointer;
   color: var(--text);
   padding: 3px;
+  gap: 3px;
   transition: all 0.2s;
   display: flex;
   align-items: center;
@@ -180,6 +187,24 @@ footer {
 .icon-button:hover {
   background-color: var(--light-gray);
 }
+
+.icon-button-footer {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+  padding: 3px;
+  gap: 3px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button-footer:hover {
+  background-color: var(--activity);
+}
+
 
 .explorer-editor {
   cursor: pointer;
@@ -482,4 +507,26 @@ main > div > span {
 .path-span {
   display: flex;
   align-items: end;
+}
+
+.footer-left, .footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-right {
+  padding-right: 8px;
+  gap: 6px;
+}
+
+.footer-0 {
+  display: flex;
+  gap: 4px;
+  padding-left: 6px;
+}
+
+@media only screen and (max-width: 905px) {
+  .search {
+    width: 90%;
+  }
 }
