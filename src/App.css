@@ -299,11 +299,8 @@ main {
   background-color: var(--page);
   width: 100%;
   flex: 1;
-  display: flex;
   gap: 1px;
   padding: 10px;
-  flex-direction: column;
-  position: relative;
   overflow: scroll;
   text-align: start;
   color: var(--text);
@@ -399,4 +396,21 @@ main > div > span {
 
 .btn:hover {
   background-color: var(--button-hover);
+}
+
+.project-images {
+  display: flex;
+  gap: 10px;
+  overflow: scroll;
+  min-height: 40%;
+}
+
+.project-images-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.link-container {
+  padding: 10px;
 }

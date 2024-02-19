@@ -3,6 +3,7 @@
         "id": "schedule",
         "name": "Work Schedule Site.pdf",
         "title": "Mishmar - Work Schedule Site",
+        "component": "project",
         "description": [
             "Mishmar is a web-based application built with Nest.js, MongoDB, TypeScript, and React with TypeScript. It streamlines the scheduling process for companies by allowing workers to submit their preferred shifts, which managers can easily organize and arrange using excel files.",
             "Mishmar has been tested and upgraded, and is currently running successfully for three years in Ramla's court house security staff."
@@ -23,6 +24,7 @@
         "id": "appointment",
         "name": "Appointment Site.pdf",
         "title": "Appointment Site",
+        "component": "project",
         "description": [
             "This is a web application developed using Express.js, JavaScript, React, CSS, and MongoDB. "
             ,"The application is designed to help users book and manage appointments online."
@@ -42,6 +44,7 @@
         "id": "calculator",
         "name": "Degree calculator PWA.pdf",
         "title": "Degree Calculator PWA",
+        "component": "project",
         "description": [
             "Developed a degree calculator web app that supports for PWA for managing courses using  ExpressJS, React and MongoDB."
         ],
@@ -61,6 +64,7 @@
         "id": "gta",
         "name": "GTA V mod.pdf",
         "title": "GTA V Mod",
+        "component": "project",
         "description": [
             "Developed a GTA V mod that adds a new menu to the game in C#."
         ],
@@ -77,6 +81,7 @@
         "id": "telegram",
         "name": "Telegram bot.pdf",
         "title": "Telegram Bot",
+        "component": "project",
         "description": [
             "Developed a telegram bot that sends me messages with Udemy coupons every day in Python and mongoDB."
         ],
