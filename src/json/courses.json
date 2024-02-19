@@ -1,3 +1,42 @@
 [
-    
+    {
+        "id": "python-course",
+        "name": "Python.md",
+        "component": "course",
+        "title": "Advanced Foundations of Python Programming | 2022 Training",
+        "date": "01/01/2022",
+        "icon": {"src": "/file-icons/readme.svg", "alt": "read-me-icon"},
+        "certificate": "/course certificates/python.jpg",
+        "description": ["This course is designed to help you understand advanced Python programming. Python is an interpreted, high-level, general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects."]
+    },
+    {
+        "id": "sql-course",
+        "name": "SQL.md",
+        "component": "course",
+        "title": "SQL- The Complete Introduction to SQL programming",
+        "date": "13/12/2021",
+        "icon": {"src": "/file-icons/readme.svg", "alt": "read-me-icon"},
+        "certificate": "/course certificates/sql.jpg",
+        "description": ["This course is designed to help you understand the basics of SQL programming. SQL is a domain-specific language used in programming and designed for managing data held in a relational database management system, or for stream processing in a relational data stream management system. It is particularly useful in handling structured data, i.e. data incorporating relations among entities and variables."]
+    },
+    {
+        "id": "git-and-github",
+        "name": "Git and GitHub.md",
+        "component": "course",
+        "title": "Git and GitHub For Beginners",
+        "date": "16/11/2021",
+        "icon": {"src": "/file-icons/readme.svg", "alt": "read-me-icon"},
+        "certificate": "/course certificates/git.jpg",
+        "description": ["This course is designed to help you understand the basics of Git and GitHub. It is a version control system that is used to track changes in computer files and coordinate work on those files among multiple people. It is primarily used for source code management in software development, but it can be used to keep track of changes in any set of files. As a distributed revision control system, it is aimed at speed, data integrity, and support for distributed, non-linear workflows."]
+    },
+    {
+        "id": "js-jquery",
+        "name": "JS JQuery.md",
+        "component": "course",
+        "title": "Complete Javascript & JQuery Course with Bonus Vue JS Intro",
+        "date": "29/10/2021",
+        "icon": {"src": "/file-icons/readme.svg", "alt": "read-me-icon"},
+        "certificate": "/course certificates/js jquery.jpg",
+        "description": ["This course is designed to help you understand the basics of JavaScript and JQuery. JavaScript is a high-level, interpreted programming language that conforms to the ECMAScript specification. It is a language that is also characterized as dynamic, weakly typed, prototype-based, and multi-paradigm. JQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, and animation much simpler with an easy-to-use API that works across a multitude of browsers."]
+    }
 ]

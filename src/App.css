@@ -6,6 +6,7 @@
   --header: #347b98;
   --text: white;
   --button: #0078d4;
+  --button-hover: #046ec1;
   --explorer: #181818;
   --search: #3f829d;
   --search-hover:#4087a3;
@@ -58,6 +59,10 @@ header {
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid var(--explorer);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .activity {
@@ -357,4 +362,41 @@ main {
 
 main > div > span {
   white-space:nowrap;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.flex-space {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.div-center {
+  display: flex;
+  align-items: center;
+  flex: 1 1;
+  height: fit-content;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.btn {
+  background-color: var(--button);
+  color: var(--text);
+  padding: 0.4rem 3rem;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--button-hover);
 }

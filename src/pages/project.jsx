@@ -1,8 +1,10 @@
 import React from 'react'
 
-function project() {
+function project({ activeTab }) {
   return (
-    <div>project</div>
+    <main>
+      
+    </main>
   )
 }
 

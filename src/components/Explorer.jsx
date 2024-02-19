@@ -6,7 +6,7 @@ import File from './File.jsx';
 import FileOpen from './FileOpen.jsx';
 
 
-function Explorer({ tabs, setTabs, setActiveTab, activeTab, academy, skills}) {
+function Explorer({ tabs, setTabs, setActiveTab, activeTab, academy, skills, experience, projects, courses, resumes}) {
 
   const closeTab = (e, id) => {
     e.stopPropagation();
@@ -74,8 +74,9 @@ function Explorer({ tabs, setTabs, setActiveTab, activeTab, academy, skills}) {
           <Accordion style={{marginLeft: '8px'}} icon={<img alt='courses-folder' className='folder-icon' src='/folders-icons/folder-middleware.svg'/>} 
           openIcon={<img className="folder-icon" alt='courses-folder-open' src='/folders-icons/folder-middleware-open.svg'/>} title="Courses">
             <div className='line'></div>
-            <div className='file'>File 2</div>
-            <div className='file'>File 3</div>
+            {courses.map(c => {
+              return <File  onClick={onClickFile} onDoubleClick={onDoubleClickFile} object={c} key={c.id}/>
+            })}
           </Accordion>
         </Accordion>
         <Accordion style={{marginLeft: '8px'}} icon={<img alt='skills-folder' className='folder-icon' src='/folders-icons/folder-src.svg'/>} 
@@ -88,20 +89,23 @@ function Explorer({ tabs, setTabs, setActiveTab, activeTab, academy, skills}) {
           <Accordion style={{marginLeft: '8px'}} icon={<img alt='resumes-folder' className='folder-icon' src='/folders-icons/folder-scripts.svg'/>} 
           openIcon={<img className="folder-icon" alt='resumes-folder-open' src='/folders-icons/folder-scripts-open.svg'/>} title="Resumes">
             <div className='line'></div>
-            <File onClick={onClickFile} onDoubleClick={onDoubleClickFile} object={{name: "ResumeHebrew.docx", id:"ResumeHebrew", icon: {alt: "word-icon", src: "/file-icons/word.svg"} }} />
-            <File onClick={onClickFile} onDoubleClick={onDoubleClickFile} object={{name: "ResumeEnglish.docx", id:"ResumeEnglish", icon: {alt: "word-icon", src: "/file-icons/word.svg"} }} />
+            {resumes.map(r => {
+              return <File  onClick={onClickFile} onDoubleClick={onDoubleClickFile} object={r} key={r.id}/>
+            })}
           </Accordion>
           <Accordion style={{marginLeft: '8px'}} icon={<img alt='experience-folder' className='folder-icon' src='/folders-icons/folder-resource.svg'/>} 
           openIcon={<img className="folder-icon" alt='experience-folder-open' src='/folders-icons/folder-resource-open.svg'/>} title="Experience">
             <div className='line'></div>
-            <div className='file'>File 2</div>
-            <div className='file'>File 3</div>
+            {experience.map(e => {
+              return <File  onClick={onClickFile} onDoubleClick={onDoubleClickFile} object={e} key={e.id}/>
+            })}
           </Accordion>
           <Accordion style={{marginLeft: '8px'}} icon={<img alt='projects-folder' className='folder-icon' src='/folders-icons/folder-github.svg'/>} 
           openIcon={<img className="folder-icon" alt='projects-folder-open' src='/folders-icons/folder-github-open.svg'/>} title="Projects">
             <div className='line'></div>
-            <div className='file'>File 2</div>
-            <div className='file'>File 3</div>
+            {projects.map(p => {
+              return <File  onClick={onClickFile} onDoubleClick={onDoubleClickFile} object={p} key={p.id}/>
+            })}
           </Accordion>
       </Accordion>
     </div>

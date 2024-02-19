@@ -1,34 +1,91 @@
 [
     {
         "id": "schedule",
-        "name": "Work Schedule Site",
-        "description1": "Developed a work schedule site to manage shifts in Ramla's court house using Django framework, HTML, CSS and JavaScript.",
-        "description2": "Later upgraded to TypeScript with NestJS, React and MongoDB.",
-        "url": "https://mishmar-ramla.vercel.app"
+        "name": "Work Schedule Site.pdf",
+        "title": "Mishmar - Work Schedule Site",
+        "description": [
+            "Mishmar is a web-based application built with Nest.js, MongoDB, TypeScript, and React with TypeScript. It streamlines the scheduling process for companies by allowing workers to submit their preferred shifts, which managers can easily organize and arrange using excel files.",
+            "Mishmar has been tested and upgraded, and is currently running successfully for three years in Ramla's court house security staff."
+        ],
+        "features": [
+            "Intuitive shift preference submission: Workers can quickly and easily input their preferred shifts, eliminating the need for time-consuming back-and-forth communications with managers.",
+            "Efficient shift organization: Managers can export worker preferences to excel files for easy organization and arrangement of shifts.",
+            "Excel import: After organizing the shifts in excel, the manager can upload the file to the website to arrange the hours.",
+            "Event creation: Managers can create events to remind themselves and workers about upcoming events.",
+            "Dynamic scheduling: The website can accommodate the scheduling needs of any office, regardless of the complexity of the schedule.",
+            "Compatibility: Mishmar is a web-based application and is compatible with all major web browsers. The website is responsive, meaning it can be accessed on any device, including desktops, laptops, tablets, and smartphones."
+        ],
+        "images": ["/screenshots/mishmar screenshot 1.png", "/screenshots/mishmar screenshot 1.png"],
+        "url": "https://mishmar-ramla.vercel.app",
+        "icon": { "src": "/file-icons/pdf.svg", "alt": "pdf-icon" }
     },
     {
         "id": "appointment",
-        "name": "Appointment Site",
-        "description1": "Developed appointment web app for a barber shop using ExpressJS, React and MongoDB.",
-        "url": "https://appointment-app-rho.vercel.app"
-
+        "name": "Appointment Site.pdf",
+        "title": "Appointment Site",
+        "description": [
+            "This is a web application developed using Express.js, JavaScript, React, CSS, and MongoDB. "
+            ,"The application is designed to help users book and manage appointments online."
+        ],
+        "features": [
+            "User authentication and authorization",
+            "Appointment scheduling and management",
+            "Email notifications for new appointments and appointment changes",
+            "Easy-to-use user interface",
+            "Mobile-friendly design"
+        ],
+        "images": ["/screenshots/appointments screenshot.png"],
+        "url": "https://appointment-app-rho.vercel.app",
+        "icon": { "src": "/file-icons/pdf.svg", "alt": "pdf-icon" }
     },
     {
         "id": "calculator",
-        "name": "Degree calculator PWA",
-        "description1": "Developed a degree calculator web app that supports for PWA for managing courses using  ExpressJS, React and MongoDB.",
-        "url": "https://hadar-degree-calculator.vercel.app"
+        "name": "Degree calculator PWA.pdf",
+        "title": "Degree Calculator PWA",
+        "description": [
+            "Developed a degree calculator web app that supports for PWA for managing courses using  ExpressJS, React and MongoDB."
+        ],
+        "features": [
+            "User authentication and authorization",
+            "Course management",
+            "Mobile-friendly design",
+            "PWA support",
+            "Simulation of the degree based on the courses and grades",
+            "Summary of the degree and the courses"
+        ],
+        "images": ["/screenshots/degree calculator screenshot.PNG"],
+        "url": "https://hadar-degree-calculator.vercel.app",
+        "icon": { "src": "/file-icons/pdf.svg", "alt": "pdf-icon" }
     },
     {
         "id": "gta",
-        "name": "GTA V mod",
-        "description1": "Developed a GTA V mod that adds a new menu to the game in C#.",
-        "url": "https://www.gta5-mods.com/scripts/nearby-peds-menu"
+        "name": "GTA V mod.pdf",
+        "title": "GTA V Mod",
+        "description": [
+            "Developed a GTA V mod that adds a new menu to the game in C#."
+        ],
+        "features": [
+            "Easy-to-use user interface",
+            "Game play enhancements",
+            "Customizable settings"
+        ],
+        "images": ["/screenshots/gta v screenshot 1.png", "/screenshots/gta v screenshot 2.png"],
+        "url": "https://www.gta5-mods.com/scripts/nearby-peds-menu",
+        "icon": { "src": "/file-icons/pdf.svg", "alt": "pdf-icon" }
     },
     {
         "id": "telegram",
-        "name": "telegram bot",
-        "description1": "Developed a telegram bot that sends me a message with Udemy coupons every day in Python and mongoDB.",
-        "url": "https://t.me/nice_notifications_bot"
+        "name": "Telegram bot.pdf",
+        "title": "Telegram Bot",
+        "description": [
+            "Developed a telegram bot that sends me messages with Udemy coupons every day in Python and mongoDB."
+        ],
+        "features": [
+            "Scraping coupons site for coupons",
+            "Sending messages to the user"
+        ],
+        "images": ["/screenshots/telegram bot screenshot.PNG"],
+        "url": "https://t.me/nice_notifications_bot",
+        "icon": { "src": "/file-icons/pdf.svg", "alt": "pdf-icon" }
     }
 ]

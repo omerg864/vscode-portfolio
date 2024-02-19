@@ -1,23 +1,26 @@
 [
     {
-        "name": "BSc Computer Science.crt", 
+        "name": "BSc Computer Science.crt",
+        "title": "BSc Computer Science",
         "icon": { "src": "/file-icons/certificate.svg", "alt": "certificate-icon"},
         "component": "academy", 
         "id": "degree", 
         "location": "College of Management", 
-        "start_date": "03-2023", 
-        "end_date": "07-2025", 
+        "start_date": "03/2023", 
+        "end_date": "07/2025", 
+        "GPA": "93",
         "ongoing": true, 
-        "description": "2nd year student with 93 GPA at the College of Management Academic Studies for a BSc in Computer Science in Rishon Lezion."
+        "description": ["2nd year student with 93 GPA at the College of Management Academic Studies for a BSc in Computer Science in Rishon Lezion."]
     },
     {
         "name": "High School.crt",
+        "title": "High School",
         "icon": { "src": "/file-icons/certificate.svg", "alt": "certificate-icon"}, 
         "id": "school", 
         "component": "academy", 
         "location": "Herzog high school", 
-        "start_date": "09-2005", 
-        "end_date": "06-2017", 
-        "description": "Graduated from Herzog high school in 2017 with with 5 units of English, mathematics, computer science and chemistry."
+        "start_date": "09/2005", 
+        "end_date": "06/2017", 
+        "description": ["Graduated from Herzog high school in 2017 with with 5 units of English, mathematics, computer science and chemistry."]
     }
 ]

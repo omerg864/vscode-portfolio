@@ -1,19 +1,30 @@
 [
     {
         "id": "hilma",
-        "name": "Full Stack Developer",
-        "description": "Mentored a fullstack course for ﬁghters to hi-tech program. Worked on Hospikol, a project of Hilma which is currently being used in hospitals around the country.",
-        "location": "Hilma Tech",
-        "start_date": "09-2022",
-        "end_date": "11-2022"
+        "name": "Full Stack Developer.txt",
+        "title": "Full Stack Developer",
+        "component": "experience",
+        "description": [
+            "Mentored a fullstack course for ﬁghters to hi-tech program.",
+            "Worked on Hospikol, a project of Hilma which is currently being used in hospitals around the country."
+        ],
+        "location": "Hilma Tech, Jerusalem",
+        "start_date": "09/2022",
+        "end_date": "11/2022",
+        "icon": { "src": "/file-icons/document.svg", "alt": "document-icon" }
     },
     {
         "id": "security",
-        "name": "Security Guard",
-        "description": "Security Guard and shift manager in ramla's court house.",
+        "name": "Security Guard.txt",
+        "title": "Security Guard",
+        "component": "experience",
+        "description": [
+            "Security Guard and shift manager in ramla's court house."
+        ],
         "location": "Ramla",
-        "start_date": "05-2020",
+        "start_date": "05/2020",
         "end_date": "",
-        "ongoing": true
+        "ongoing": true,
+        "icon": { "src": "/file-icons/document.svg", "alt": "document-icon" }
     }
 ]

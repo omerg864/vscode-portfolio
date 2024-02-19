@@ -1,0 +1,16 @@
+[
+    {
+        "name": "ResumeHebrew.docx", 
+        "id":"ResumeHebrew",
+        "component": "resume",
+        "icon": {"alt": "word-icon", "src": "/file-icons/word.svg"},
+        "url": "https://res.cloudinary.com/omerg/raw/upload/v1708288345/resumes/%D7%A2%D7%95%D7%9E%D7%A8%20%D7%92%D7%99%D7%99%D7%96%D7%99%D7%A0%D7%92%D7%A8%20%D7%A7%D7%95%D7%A8%D7%95%D7%AA%20%D7%97%D7%99%D7%99%D7%9D.docx"
+    },
+    {
+        "name": "ResumeEnglish.docx", 
+        "id":"ResumeEnglish",
+        "component": "resume",
+        "icon": {"alt": "word-icon", "src": "/file-icons/word.svg"},
+        "url": "https://res.cloudinary.com/omerg/raw/upload/v1708288346/resumes/Omer%20Gaizinger%20Resume.docx"
+    }
+]

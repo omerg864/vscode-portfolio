@@ -18,6 +18,8 @@ import courses from './json/courses.json';
 import projects from './json/projects.json';
 import experience from './json/experience.json';
 import academy from './json/academy.json';
+import Resume from './pages/resume.jsx';
+import resumes from './json/resumes.json';
 
 
 function App() {
@@ -27,10 +29,10 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header setSideBar={setSideBar}/>
       <div className='main'>
         <ActivityBar sidebar={sideBar} setSidebar={setSideBar} />
-        {sideBar === 'explorer' && <Explorer courses={courses} projects={projects} 
+        {sideBar === 'explorer' && <Explorer resumes={resumes} courses={courses} projects={projects} 
         experience={experience} academy={academy} tabs={tabs} setTabs={setTabs} 
         setActiveTab={setActiveTab} activeTab={activeTab} skills={skills}/>}
         {sideBar === 'search' && <Search />}
@@ -38,11 +40,12 @@ function App() {
           <TabsBar tabs={tabs} setActiveTab={setActiveTab} setTabs={setTabs} activeTab={activeTab} />
           {activeTab.id === 'main' && <Main />}
           {activeTab.id === 'contact' && <Contact />}
-          {activeTab.component === 'academy' && <Academy academy={activeTab} />}
+          {activeTab.component === 'academy' && <Academy activeTab={activeTab} />}
           {activeTab.component === 'skill' && <Skill activeTab={activeTab} />}
-          {activeTab.component === 'project' && <Project academy={activeTab} />}
-          {activeTab.component === 'course' && <Course academy={activeTab} />}
-          {activeTab.component === 'experience' && <Experience academy={activeTab} />}
+          {activeTab.component === 'project' && <Project activeTab={activeTab} />}
+          {activeTab.component === 'course' && <Course activeTab={activeTab} />}
+          {activeTab.component === 'experience' && <Experience activeTab={activeTab} />}
+          {activeTab.component === 'resume' && <Resume activeTab={activeTab} />}
         </div>
       </div>
       <StatusBar />

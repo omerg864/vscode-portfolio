@@ -20,14 +20,14 @@ const numbers = (limit) => {
     return lines;
 }
 
-const numberRow = (number ,elements) => {
+const numberRow = (number ,elements, style = {}) => {
     let numberTemp = number;
     let spaceTemp = -1;
     while(parseInt(numberTemp) > 0) {
         numberTemp = numberTemp / 10;
         spaceTemp += 1;
     }
-    return <div>
+    return <div style={style}>
         <small style={{marginLeft: `calc(2rem - ${spaceTemp * 6}px)`}} className='number-row'>{number}</small>
         {elements}
     </div>

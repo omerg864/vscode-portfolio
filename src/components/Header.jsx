@@ -1,10 +1,11 @@
 import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 
-function Header() {
+function Header({ setSideBar }) {
+
   return (
     <header>
-      <div className='search'>
+      <div className='search' onClick={(e) => setSideBar('search')}>
         <span className='search-icon'>
           <SearchIcon style={{fontSize: '1.1rem'}} />
         </span>
