@@ -13,6 +13,7 @@
   --gray: #cacaca;
   --selected-icon-color: rgb(255, 186, 249);
   --light-gray: rgba(202, 202, 202, 0.5);
+  --highlight: rgba(202, 202, 202, 0.3);
   --light-page: rgba(60, 59, 59, 0.548);
   --light-explorer: #181818bd;
   --page: #1f1f1f;
@@ -27,6 +28,7 @@
   --const: #4fc2ff;
   --blue-brackets: #169fff;
   --comment: #6a9956;
+  --gray-input: #313131;
 }
 
 .App {
@@ -76,12 +78,13 @@ header {
   color: var(--text);
   padding: 10px;
   text-align: center;
-  min-width: 20%;
+  width: 20%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  overflow: scroll;
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
@@ -221,12 +224,26 @@ footer {
 }
 
 .file {
-  margin-left: 25px;
+  padding-left: 25px;
   display: flex;
   gap: 3px;
   text-align: center;
   align-items: center;
   cursor: pointer;
+}
+
+.file:hover {
+  background-color: var(--highlight);
+}
+
+.active-file {
+  padding-left: 25px;
+  display: flex;
+  gap: 3px;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--light-gray);
 }
 
 .folder {
@@ -252,6 +269,7 @@ footer {
 .file-open-info {
   display: flex;
   gap: 3px;
+  width: 100%;
 }
 
 .tab {
@@ -293,6 +311,7 @@ footer {
   padding: 1px;
   background-color: var(--page);
   color: var(--gray);
+  padding-left: 15px;
 }
 
 main {
@@ -419,4 +438,48 @@ main > div > span {
   width: 100%;
   text-align: center;
   border-bottom: 1px solid var(--light-gray);
+}
+
+.search-tab-input {
+  background-color: var(--gray-input);
+  color: var(--text);
+  padding: 7px;
+  border: 1px solid var(--light-gray);
+  border-radius: 2px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: start;
+}
+
+.search-tab-input:focus {
+  border: 1px solid var(--button-hover);
+}
+
+.search-tab-input::placeholder {
+  color: var(--light-gray);
+}
+
+.result-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: scroll;
+  padding-top: 10px;
+}
+
+.path-small {
+  font-size: 0.8rem;
+  color: var(--gray);
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.file > div > span, .active-file > div > span, .file > span, .active-file > span {
+  white-space: nowrap;
+}
+
+.path-span {
+  display: flex;
+  align-items: end;
 }

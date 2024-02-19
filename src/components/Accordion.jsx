@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
 import { IoIosArrowForward } from "react-icons/io";
-import { IoIosArrowDown } from "react-icons/io";
 import { useSpring, animated } from "react-spring";
 
 
 
-function Accordion({ title, icon, openIcon, children, style, open, animation}) {
+function Accordion({ title, icon, openIcon, children, style, open, animation, fit, styleContent}) {
     const [isActive, setIsActive] = useState(open ? open : false);
 
     const openAnimation = useSpring({
-        from: { opacity: "0", maxHeight: icon ? "24px" : "15px" },
-        to: { opacity: "1", maxHeight: isActive ? "1200px" : icon ? "24px" : "15px" },
+        from: { opacity: "0", maxHeight: icon ? "24px" : "15px"},
+        to: { opacity: "1", maxHeight: isActive ? "1200px" : icon ? "24px" : "15px"},
         config: { duration: animation ? "300": "0" }
       });
 
@@ -25,7 +24,7 @@ function Accordion({ title, icon, openIcon, children, style, open, animation}) {
       });
 
   return (
-    <animated.div className={animation ? 'accordion-transition' :'accordion'} style={{...openAnimation, ...style}}>
+    <animated.div className={animation ? 'accordion-transition' :'accordion'} style={{...openAnimation, ...style, width: fit && isActive ? "fit-content" : "100%" }}>
         <div className='accordion-title' onClick={() => setIsActive(!isActive)}>
             <animated.i style={iconAnimation}>
                 <IoIosArrowForward />
@@ -33,7 +32,7 @@ function Accordion({ title, icon, openIcon, children, style, open, animation}) {
             {isActive ? openIcon && openIcon :icon && icon}
             <span>{title}</span>
         </div>
-            <div className='accordion-content'>
+            <div className='accordion-content' style={styleContent ? styleContent : {}}>
             {children}
             </div>
     </animated.div>

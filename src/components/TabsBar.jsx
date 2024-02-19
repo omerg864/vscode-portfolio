@@ -1,5 +1,7 @@
 import React from 'react'
 import Tab from './Tab'
+import Path from './Path';
+import { createPath } from '../functions/functions';
 
 function TabsBar({tabs, setTabs, setActiveTab, activeTab}) {
 
@@ -23,7 +25,7 @@ function TabsBar({tabs, setTabs, setActiveTab, activeTab}) {
           })}
         </div>
         <div className='src-bar'>
-          {activeTab && activeTab.id && <span style={{marginLeft: "15px"}}>{activeTab.id}</span>}
+          <Path path={createPath(activeTab, false)} activeTab={activeTab} />
         </div>
     </div>
   )

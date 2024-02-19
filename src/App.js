@@ -35,7 +35,9 @@ function App() {
         {sideBar === 'explorer' && <Explorer resumes={resumes} courses={courses} projects={projects} 
         experience={experience} academy={academy} tabs={tabs} setTabs={setTabs} 
         setActiveTab={setActiveTab} activeTab={activeTab} skills={skills}/>}
-        {sideBar === 'search' && <Search />}
+        {sideBar === 'search' && <Search resumes={resumes} courses={courses} projects={projects} 
+        experience={experience} academy={academy} tabs={tabs} setTabs={setTabs} 
+        setActiveTab={setActiveTab} activeTab={activeTab} skills={skills} />}
         <div className='editor'>
           <TabsBar tabs={tabs} setActiveTab={setActiveTab} setTabs={setTabs} activeTab={activeTab} />
           {activeTab.id === 'main' && <Main />}

@@ -1,24 +1,4 @@
-
-const numbers = (limit) => {
-    const lines = []
-    let limitTemp = limit;
-    let space = 0;
-    while(parseInt(limitTemp) > 0) {
-        limitTemp = limitTemp / 10;
-        space += 1;
-    }
-    let reduce = 10;
-    for (let i = 1; i <= limit; i++) {
-        if(i === reduce) {
-            reduce *= 10;
-            space--;
-        }
-        let number = <small key={i} style={{top: `${i * 20}px`, textIndent: `${space * 5}px`}} className='number-row'>{i}</small>;
-        lines.push(number)
-    }
-    lines.push(<small key={limit + 1} style={{top: `${(limit + 1) * 20}px`}} className='number-row'>&nbsp;</small>)
-    return lines;
-}
+import { object } from "prop-types";
 
 const numberRow = (number ,elements, style = {}) => {
     let numberTemp = number;
@@ -33,5 +13,53 @@ const numberRow = (number ,elements, style = {}) => {
     </div>
 }
 
+const searchData = (data, value) => {
+    const searchResults = [];
+    for (let i = 0; i < data.length; i++) {
+        if(data[i].name.toLowerCase().includes(value.toLowerCase())) {
+            searchResults.push({...data[i], found: "name"});
+        } else {
+            if (data[i].description) {
+                for (let j = 0; j < data[i].description.length; j++) {
+                    if(data[i].description[j].toLowerCase().includes(value.toLowerCase())) {
+                        searchResults.push({...data[i], found: "description", index: j});
+                    }
+                }
+            }
+        }
+    }
+    return searchResults;
+}
 
-export { numbers, numberRow };
+const createPath = (object, include_file = true) => {
+    let path = [];
+    // eslint-disable-next-line default-case
+    switch (object.component) {
+        case "academy":
+            path.push("Education");
+            path.push("Academy");
+            break;
+        case "skill":
+            path.push("Skills");
+            break;
+        case "project":
+            path.push("Projects");
+            break;
+        case "course":
+            path.push("Education");
+            path.push("Courses");
+            break;
+        case "experience":
+            path.push("Experience");
+            break;
+        case "resume":
+            path.push("Resumes");
+            break;
+    }
+    if(include_file)
+        path.push(object.name);
+    return path;
+}
+
+
+export { numberRow, searchData, createPath };
