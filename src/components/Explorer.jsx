@@ -1,13 +1,13 @@
 import React from 'react';
 import IconButton from './IconButton';
-import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import Accordion from './Accordion.jsx';
 import File from './File.jsx';
 import FileOpen from './FileOpen.jsx';
 import { createPath } from '../functions/functions.js';
+import { MdClose } from "react-icons/md";
 
 
-function Explorer({ tabs, setTabs, setActiveTab, activeTab, academy, skills, experience, projects, courses, resumes}) {
+function Explorer({ tabs, setTabs, setActiveTab, activeTab, academy, skills, experience, projects, courses, resumes, setSideBar}) {
 
   const closeTab = (e, id) => {
     e.stopPropagation();
@@ -52,7 +52,7 @@ function Explorer({ tabs, setTabs, setActiveTab, activeTab, academy, skills, exp
     <div className='explorer'>
       <div className='explorer-title'>
         <span>EXPLORER</span>
-        <IconButton icon={<HiOutlineDotsHorizontal/>} />
+        <IconButton onClick={() => setSideBar('')} icon={<MdClose/>} />
       </div>
       <Accordion animation={true} style={{overflowX: 'scroll', paddingBottom: "8px"}} styleContent={{display: 'inline-block', minWidth: "100%"}} open={true} title="OPEN EDITORS">
         {tabs.map((tab) => {

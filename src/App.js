@@ -32,10 +32,10 @@ function App() {
       <Header setSideBar={setSideBar}/>
       <div className='main'>
         <ActivityBar sidebar={sideBar} setSidebar={setSideBar} />
-        {sideBar === 'explorer' && <Explorer resumes={resumes} courses={courses} projects={projects} 
+        {sideBar === 'explorer' && <Explorer setSideBar={setSideBar} resumes={resumes} courses={courses} projects={projects} 
         experience={experience} academy={academy} tabs={tabs} setTabs={setTabs} 
         setActiveTab={setActiveTab} activeTab={activeTab} skills={skills}/>}
-        {sideBar === 'search' && <Search resumes={resumes} courses={courses} projects={projects} 
+        {sideBar === 'search' && <Search setSideBar={setSideBar} resumes={resumes} courses={courses} projects={projects} 
         experience={experience} academy={academy} tabs={tabs} setTabs={setTabs} 
         setActiveTab={setActiveTab} activeTab={activeTab} skills={skills} />}
         <div className='editor'>

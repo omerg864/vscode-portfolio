@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import IconButton from './IconButton';
-import { VscRefresh } from "react-icons/vsc";
 import { useDebounce } from 'use-debounce';
 import { searchData } from '../functions/functions';
 import File from './File';
+import { MdClose } from "react-icons/md";
 
 
-function Search({ tabs, setTabs, setActiveTab, activeTab, academy, skills, experience, projects, courses, resumes }) {
+function Search({ tabs, setTabs, setActiveTab, activeTab, academy, skills, experience, projects, courses, resumes , setSideBar}) {
 
     const [search, setSearch] = useState('');
     const [value] = useDebounce(search, 800);
@@ -59,7 +59,7 @@ function Search({ tabs, setTabs, setActiveTab, activeTab, academy, skills, exper
     <div className='explorer'>
       <div className='explorer-title'>
         <span>SEARCH</span>
-        <IconButton icon={<VscRefresh/>} />
+        <IconButton onClick={() => setSideBar('')} icon={<MdClose/>} />
       </div>
       <div>
         <input className='search-tab-input' onChange={handleSearch} value={search} type='text' placeholder='Search'/>

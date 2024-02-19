@@ -288,7 +288,7 @@ footer {
   width: 1px;
   height: 100%;
   background-color: var(--light-gray);
-  left: 7px;
+  left: 0.9rem;
 }
 
 .file-open-info {
