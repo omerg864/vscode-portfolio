@@ -414,3 +414,9 @@ main > div > span {
 .link-container {
   padding: 10px;
 }
+
+.underline {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid var(--light-gray);
+}
