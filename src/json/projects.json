@@ -92,5 +92,25 @@
         "images": ["/screenshots/telegram bot screenshot.PNG"],
         "url": "https://t.me/nice_notifications_bot",
         "icon": { "src": "/file-icons/pdf.svg", "alt": "pdf-icon" }
+    },
+    {
+        "id" : "graphic",
+        "name": "GraphicHub.pdf",
+        "title": "GraphicHub - GitHub for Graphic Designers",
+        "component": "project",
+        "description": [
+            "GraphicHub is a website designed for graphic designers, providing a platform for sharing and showcasing their projects. ",
+            "It is built using React, MongoDB, Express.js, and CSS, and it is fully responsive, so users can access it from any device."
+        ],
+        "features": [
+            "User authentication and authorization",
+            "Mobile-friendly design",
+            "Easy-to-use user interface",
+            "Project sharing and showcasing",
+            "Private viewing of projects"
+        ],
+        "images": ["/screenshots/graphichub screenshot.png"],
+        "url": "https://graphic-hub.vercel.app",
+        "icon": { "src": "/file-icons/pdf.svg", "alt": "pdf-icon" }
     }
 ]

@@ -78,7 +78,7 @@ header {
   color: var(--text);
   padding: 10px;
   text-align: center;
-  width: 20%;
+  min-width: 20%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -533,6 +533,6 @@ main > div > span {
 
 @media only screen and (max-width: 500px) {
   .explorer {
-    width: 50%;
+    min-width: 50%;
   }
 }
