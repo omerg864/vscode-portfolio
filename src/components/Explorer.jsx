@@ -59,10 +59,10 @@ function Explorer({ tabs, setTabs, setActiveTab, activeTab, academy, skills, exp
           return <FileOpen key={tab.id} path={createPath(tab, false)} name={tab.name} id={tab.id} close={closeTab} onClick={openFromEditTab} icon={tab.icon ? <img alt={tab.icon.alt} className='file-icon' src={tab.icon.src}/> : false}/>
         })}
       </Accordion>
-      <Accordion animation={true} open={true} styleContent={{display: 'inline-block'}} style={{marginTop: '8px', overflowX: 'scroll', flex: '1'}} title="OMER GAIZINGER">
+      <Accordion animation={true} open={true} styleContent={{display: 'inline-block', minWidth: "100%"}} style={{marginTop: '8px', overflowX: 'scroll', flex: '1'}} title="OMER GAIZINGER">
         <File active={activeTab.id === "main"} onClick={onClickFile} onDoubleClick={onDoubleClickFile} object={{name: "main.py", id:"main", icon: {alt: "python-icon", src: "/file-icons/python.svg"} }}/>
         <File active={activeTab.id === "contact"} onClick={onClickFile} onDoubleClick={onDoubleClickFile} object={{name: "contact.js", id:"contact", icon: {alt: "js-icon", src: "/file-icons/javascript.svg"} }} />
-        <Accordion style={{paddingLeft: '8px'}} fit={true}  icon={<img alt='graduation-folder' className='folder-icon' src='/folders-icons/folder-graduate.png'/>} 
+        <Accordion style={{paddingLeft: '8px', minWidth: "100%"}} fit={true}  icon={<img alt='graduation-folder' className='folder-icon' src='/folders-icons/folder-graduate.png'/>} 
         openIcon={<img className="folder-icon" alt='graduation-folder-open' src='/folders-icons/folder-graduate-open.png'/>} title="Education">
           <div className='line'></div>
           <Accordion style={{paddingLeft: '8px', minWidth: "100%"}} fit={true} icon={<img alt='academy-folder' className='folder-icon' src='/folders-icons/folder-core.svg'/>} 
