@@ -109,7 +109,7 @@
             "Project sharing and showcasing",
             "Private viewing of projects"
         ],
-        "images": ["/screenshots/graphichub screenshot.png"],
+        "images": ["/screenshots/GraphicHub screenshot.png"],
         "url": "https://graphic-hub.vercel.app",
         "icon": { "src": "/file-icons/pdf.svg", "alt": "pdf-icon" }
     }
